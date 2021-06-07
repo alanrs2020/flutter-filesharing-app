@@ -1,0 +1,54 @@
+name: bytes
+description: bytes WIFI File Sharing, PDF Scanner & WhatsApp Status Saver App
+homepage: https://bytesweb.web.app/
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+
+version: 201.201.21+38
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  flutter_audio_query: ^0.3.5+6
+  photo_manager: ^1.0.4
+  just_audio: ^0.7.0-nullsafety.1
+  fluttertoast: ^8.0.3
+  device_apps: ^2.0.1
+  file_picker: ^2.1.7
+  nearby_connections: ^3.0.0
+  camera: ^0.8.0
+  share: ^2.0.1
+  url_launcher: ^6.0.2
+  pdf: ^3.1.0
+  open_file: ^3.1.0
+  video_thumbnail: ^0.3.3
+  google_mobile_ads: ^0.12.1+1
+
+
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - images/bytesrgif.gif
+    - images/bytes.jpg
+    - images/bytesplash.png
+
