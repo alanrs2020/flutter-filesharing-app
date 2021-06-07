@@ -43,7 +43,9 @@ Please make sure the permissions we have requested are used for file transfers/f
 If you are experiencing any problems, please feel free to contact us at devalanrs@gmail.com
 
 
+# Screenshots
 
+![Alt text](relative/path/to/img.jpg?raw=true "Title")
 
 ## Getting Started
 
