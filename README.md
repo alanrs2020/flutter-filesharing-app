@@ -45,6 +45,10 @@ If you are experiencing any problems, please feel free to contact us at devalanr
 
 # Screenshots
 
+![Alt text](screenshots/first.jpg)
+![Alt text](screenshots/second.jpg)
+![Alt text](screenshots/third.jpg)
+![Alt text](screenshots/fourth.jpg)
 ![Alt text](screenshots/fifth.jpg)
 
 ## Getting Started
