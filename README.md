@@ -45,7 +45,7 @@ If you are experiencing any problems, please feel free to contact us at devalanr
 
 # Screenshots
 
-![Alt text](relative/path/to/img.jpg?raw=true "Title")
+![Alt text](screenshots/fifth.jpg)
 
 ## Getting Started
 
