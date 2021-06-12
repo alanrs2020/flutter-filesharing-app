@@ -731,7 +731,7 @@ getProgress(double v){
                             }
                           }
                         } else if (payload.type == PayloadType.FILE) {
-                          tempFile = File(payload.filePath);
+                          tempFile = File(payload.uri);
 
                           Fluttertoast.showToast(
                               msg: "File transfer Started :)",
