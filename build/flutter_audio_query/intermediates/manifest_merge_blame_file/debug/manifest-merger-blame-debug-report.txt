@@ -1,0 +1,18 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="boaventura.com.devel.br.flutteraudioquery" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="16"
+6-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_audio_query-0.3.5+6\android\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="16" />
+7-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_audio_query-0.3.5+6\android\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+9-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_audio_query-0.3.5+6\android\src\main\AndroidManifest.xml:4:5-79
+9-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_audio_query-0.3.5+6\android\src\main\AndroidManifest.xml:4:22-77
+10    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+10-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_audio_query-0.3.5+6\android\src\main\AndroidManifest.xml:5:5-80
+10-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\flutter_audio_query-0.3.5+6\android\src\main\AndroidManifest.xml:5:22-78
+11
+12</manifest>

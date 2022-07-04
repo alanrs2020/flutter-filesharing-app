@@ -1,5 +1,6 @@
 
 import 'dart:io';
+import 'dart:typed_data';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:open_file/open_file.dart';
 
 
 class AppDirectory extends StatefulWidget{
@@ -20,8 +22,10 @@ class AppDirectoryState extends State<AppDirectory>{
 
   List<File> files = [];
   List<File> VideoPaths = [];
+
   static  int j = 0;
-  static Map<dynamic,dynamic> map = Map();
+  static List<File> folders = [];
+  static Map _map = new Map();
 
   static const platform = const MethodChannel('storage_access');
   @override
@@ -80,46 +84,60 @@ class AppDirectoryState extends State<AppDirectory>{
                 ),
                 onTap: _selectFiles,
               ),
-              Text('App files & folder'),
+              Align(
+                child: Text('App History'),
+                alignment: Alignment.topLeft,
+              ),
 
               Expanded(
                 child:
-        map.isNotEmpty ?
-                    ListView.builder(
-                        itemCount: (map.length/2).ceil(),
-                        itemBuilder: (_,index){
-                  return ListTile(
-                    title: Text(map["Name$index"]),
-                    subtitle: Text("bytes"),
-                    leading: Icon(Icons.folder_open_outlined,color: Colors.cyanAccent,),
-                    onTap: ()async{
-                      await platform.invokeMethod("OpenFolder",<String,dynamic>{
-                        'Path':map['Path$index'],
-                      });
-                    },
-                  );
-               }):
-              Center(child: Text(
+        _map.isEmpty ? Center(child: Text(
                   "Received files & saved pdf files appear here.",
-                  style: TextStyle(color: Colors.black38)),),
-
+                  style: TextStyle(color: Colors.black38)),):
+        ListView.builder(
+            itemCount: ((_map.length)/2).ceil(),
+            itemBuilder: (_,index){
+              return ListTile(
+                title: Text(_map["name$index"]),
+                subtitle: Text(File(_map["path$index"]).lastAccessedSync().toLocal().toString()),
+                leading: FutureBuilder(
+                  future: getThumb(_map['path$index']),
+                  builder: (_,AsyncSnapshot snapshot){
+                   if(snapshot.connectionState == ConnectionState.done){
+                     return snapshot.data != null ? Image.memory(snapshot.data,fit: BoxFit.cover,width: 50,height: 50,) : Icon(Icons.file_copy_sharp);
+                   }else{
+                     return Icon(Icons.file_copy_sharp);
+                   }
+                  },
+                ),
+                onTap: ()async{
+                  OpenFile.open(_map['path$index']);
+                },
+              );
+            })
               )
             ]
         ));
   }
 
  void getFiles() async {
+   await platform.invokeMethod("AppFiles").then((value) {
+     if(value != null){
+       setState(() {
+         _map.addAll(value);
+       });
+     }
+   });
+ }
 
-
-   await platform.invokeMethod("getFolders").then((value) {
-
-    if(value != null){
-     setState(() {
-       map.addAll(value);
-         });
-         }
-    });
-  }
-
+Future<Uint8List> getThumb(String path) async {
+    Uint8List bytes;
+   await platform.invokeMethod("getThumb",<String,dynamic>{
+     'path':path,
+   }).then((value){
+       bytes = value;
+   });
+   return bytes;
+ }
 
 }

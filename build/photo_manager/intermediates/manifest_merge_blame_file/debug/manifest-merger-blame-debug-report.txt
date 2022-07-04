@@ -1,0 +1,15 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.fluttercandies.photo_manager" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="16"
+6-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\photo_manager-2.1.4\android\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="16" />
+7-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\photo_manager-2.1.4\android\src\main\AndroidManifest.xml
+8
+9    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+9-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\photo_manager-2.1.4\android\src\main\AndroidManifest.xml:4:5-79
+9-->C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\photo_manager-2.1.4\android\src\main\AndroidManifest.xml:4:22-77
+10
+11</manifest>

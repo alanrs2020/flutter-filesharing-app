@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:math';
 import 'dart:ui';
+import 'package:bytes/webview.dart';
 import 'package:camera/camera.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -181,11 +182,28 @@ bool isEnabled = false;
                              Fluttertoast.showToast(msg: "Empty");
                            }
                          },
-                             child: TextButton(child: Text("Save",style: TextStyle(color: Colors.amber),),))
+                             child: TextButton(onPressed: () {  },
+                             child: Text("Save",style: TextStyle(color: Colors.amber),),))
                        ],
                      )
                      );
 
+                    },
+                  ),
+                  ListTile(
+                    title: Text("Connect PC"),
+                    leading: Card(
+                      clipBehavior: Clip.hardEdge,
+                      child: Icon(Icons.desktop_windows,color: Colors.cyan,),
+                      elevation: 10,
+                      color: Color.fromARGB(255, 51, 51, 51),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5)
+                      ),
+                    ),
+                    onTap: () async{
+                      Navigator.pop(context);
+                      Navigator.push(context, MaterialPageRoute(builder:  (context) => WebView()));
                     },
                   ),
                   ListTile(
@@ -475,8 +493,8 @@ bool isEnabled = false;
       }
     }
      }
-SaveName(String name) async{
-  try {
+  SaveName(String name) async{
+   try {
     final path = await _localPath;
     File file = File('$path/.name.txt');
     setState(() {
@@ -511,7 +529,7 @@ SaveName(String name) async{
          recursive: true);
      return _appDocDirNewFolder.path;
    }
-    }
+  }
 
 
    // ignore: non_constant_identifier_names

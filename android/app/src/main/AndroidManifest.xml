@@ -21,25 +21,27 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
     <application
-        android:name="io.flutter.app.FlutterApplication"
+        android:name="${applicationName}"
+
         android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true"
         android:label="bytes"
         android:supportsRtl="true"
         android:icon="@mipmap/ic_launcher"
-        tools:targetApi="30">
+        tools:targetApi="32">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8379180632315258~8665920282"
             />
         <activity
+            android:exported="true"
             android:name="com.devalanrs.bytes.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize"
-            tools:targetApi="30">
+            tools:targetApi="32">
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
@@ -69,5 +71,13 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
+
+    <meta-data
+        android:name="flutterEmbedding"
+        android:value="2" />
 </manifest>

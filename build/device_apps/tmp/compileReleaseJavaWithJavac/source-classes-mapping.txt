@@ -1,0 +1,26 @@
+fr/g123k/deviceapps/AsyncWork.java
+ fr.g123k.deviceapps.AsyncWork
+fr/g123k/deviceapps/listener/DeviceAppsChangedListener.java
+ fr.g123k.deviceapps.listener.DeviceAppsChangedListener
+ fr.g123k.deviceapps.listener.DeviceAppsChangedListener$1
+fr/g123k/deviceapps/utils/AppDataEventConstants.java
+ fr.g123k.deviceapps.utils.AppDataEventConstants
+fr/g123k/deviceapps/utils/DrawableUtils.java
+ fr.g123k.deviceapps.utils.DrawableUtils
+fr/g123k/deviceapps/InstalledAppsCallback.java
+ fr.g123k.deviceapps.InstalledAppsCallback
+fr/g123k/deviceapps/utils/Base64Utils.java
+ fr.g123k.deviceapps.utils.Base64Utils
+fr/g123k/deviceapps/DeviceAppsPlugin.java
+ fr.g123k.deviceapps.DeviceAppsPlugin
+ fr.g123k.deviceapps.DeviceAppsPlugin$1
+ fr.g123k.deviceapps.DeviceAppsPlugin$1$1
+ fr.g123k.deviceapps.DeviceAppsPlugin$2
+fr/g123k/deviceapps/BuildConfig.java
+ fr.g123k.deviceapps.BuildConfig
+fr/g123k/deviceapps/utils/AppDataConstants.java
+ fr.g123k.deviceapps.utils.AppDataConstants
+fr/g123k/deviceapps/listener/DeviceAppsChangedListenerInterface.java
+ fr.g123k.deviceapps.listener.DeviceAppsChangedListenerInterface
+fr/g123k/deviceapps/utils/IntentUtils.java
+ fr.g123k.deviceapps.utils.IntentUtils

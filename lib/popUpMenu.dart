@@ -74,7 +74,7 @@ class popUpMenu extends StatefulWidget {
                        ),
                        TextButton(onPressed: (){
                          Navigator.pop(context);
-                         WifiDirect().invokeDisConnect(context);
+                         WifiDirect(onlineAction: (String value) {  },).invokeDisConnect(context);
                        },
                            child: Text("Yes",style: TextStyle(color: Colors.amber)))
                      ],
@@ -87,7 +87,7 @@ class popUpMenu extends StatefulWidget {
              try{
                 launch("https://bytesweb.web.app/help.html");
              }catch(msg){
-               print('Could not launch help'+msg);
+               print('Could not launch help'+msg.toString());
              }
            }
            else if(value == 4){

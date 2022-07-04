@@ -1,0 +1,45 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:1:1-10:12
+INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:1:1-10:12
+	package
+		ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:2:5-46
+		INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+		INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:4:5-79
+	android:name
+		ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:4:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:5:5-81
+	android:name
+		ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:5:22-78
+uses-permission#android.permission.BLUETOOTH_ADVERTISE
+ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:7:5-78
+	android:name
+		ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:7:22-75
+uses-permission#android.permission.BLUETOOTH_SCAN
+ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:8:5-73
+	android:name
+		ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:8:22-70
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:9:5-76
+	android:name
+		ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml:9:22-73
+uses-sdk
+INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+		ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+		INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+		ADDED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml
+		INJECTED from C:\src\FlutterFolder\flutter\.pub-cache\hosted\pub.dartlang.org\nearby_connections-3.2.0\android\src\main\AndroidManifest.xml

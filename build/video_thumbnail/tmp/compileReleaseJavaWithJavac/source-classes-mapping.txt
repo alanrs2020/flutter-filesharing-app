@@ -1,0 +1,6 @@
+xyz/justsoft/video_thumbnail/BuildConfig.java
+ xyz.justsoft.video_thumbnail.BuildConfig
+xyz/justsoft/video_thumbnail/VideoThumbnailPlugin.java
+ xyz.justsoft.video_thumbnail.VideoThumbnailPlugin
+ xyz.justsoft.video_thumbnail.VideoThumbnailPlugin$1
+ xyz.justsoft.video_thumbnail.VideoThumbnailPlugin$2

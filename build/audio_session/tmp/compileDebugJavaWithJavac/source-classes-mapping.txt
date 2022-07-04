@@ -1,0 +1,9 @@
+com/ryanheise/audio_session/AndroidAudioManager.java
+ com.ryanheise.audio_session.AndroidAudioManager
+ com.ryanheise.audio_session.AndroidAudioManager$Singleton
+ com.ryanheise.audio_session.AndroidAudioManager$Singleton$1
+ com.ryanheise.audio_session.AndroidAudioManager$Singleton$2
+com/ryanheise/audio_session/AudioSessionPlugin.java
+ com.ryanheise.audio_session.AudioSessionPlugin
+com/ryanheise/audio_session/BuildConfig.java
+ com.ryanheise.audio_session.BuildConfig

@@ -1,0 +1,51 @@
+boaventura/com/devel/br/flutteraudioquery/FlutterAudioQueryPlugin.java
+ boaventura.com.devel.br.flutteraudioquery.FlutterAudioQueryPlugin
+ boaventura.com.devel.br.flutteraudioquery.FlutterAudioQueryPlugin$LifeCycleObserver
+boaventura/com/devel/br/flutteraudioquery/loaders/ArtistLoader.java
+ boaventura.com.devel.br.flutteraudioquery.loaders.ArtistLoader
+ boaventura.com.devel.br.flutteraudioquery.loaders.ArtistLoader$1
+ boaventura.com.devel.br.flutteraudioquery.loaders.ArtistLoader$ArtistLoadTask
+boaventura/com/devel/br/flutteraudioquery/loaders/AbstractLoader.java
+ boaventura.com.devel.br.flutteraudioquery.loaders.AbstractLoader
+boaventura/com/devel/br/flutteraudioquery/loaders/PlaylistLoader.java
+ boaventura.com.devel.br.flutteraudioquery.loaders.PlaylistLoader
+ boaventura.com.devel.br.flutteraudioquery.loaders.PlaylistLoader$1
+ boaventura.com.devel.br.flutteraudioquery.loaders.PlaylistLoader$PlayListMethodType
+ boaventura.com.devel.br.flutteraudioquery.loaders.PlaylistLoader$PlaylistLoadTask
+boaventura/com/devel/br/flutteraudioquery/sortingtypes/PlaylistSortType.java
+ boaventura.com.devel.br.flutteraudioquery.sortingtypes.PlaylistSortType
+boaventura/com/devel/br/flutteraudioquery/sortingtypes/ArtistSortType.java
+ boaventura.com.devel.br.flutteraudioquery.sortingtypes.ArtistSortType
+boaventura/com/devel/br/flutteraudioquery/delegate/AudioQueryDelegate.java
+ boaventura.com.devel.br.flutteraudioquery.delegate.AudioQueryDelegate
+ boaventura.com.devel.br.flutteraudioquery.delegate.AudioQueryDelegate$1
+ boaventura.com.devel.br.flutteraudioquery.delegate.AudioQueryDelegate$2
+ boaventura.com.devel.br.flutteraudioquery.delegate.AudioQueryDelegate$3
+ boaventura.com.devel.br.flutteraudioquery.delegate.AudioQueryDelegate$4
+ boaventura.com.devel.br.flutteraudioquery.delegate.AudioQueryDelegate$PermissionManager
+ boaventura.com.devel.br.flutteraudioquery.delegate.AudioQueryDelegateInterface
+boaventura/com/devel/br/flutteraudioquery/loaders/GenreLoader.java
+ boaventura.com.devel.br.flutteraudioquery.loaders.GenreLoader
+ boaventura.com.devel.br.flutteraudioquery.loaders.GenreLoader$1
+ boaventura.com.devel.br.flutteraudioquery.loaders.GenreLoader$GenreLoadTask
+boaventura/com/devel/br/flutteraudioquery/sortingtypes/AlbumSortType.java
+ boaventura.com.devel.br.flutteraudioquery.sortingtypes.AlbumSortType
+boaventura/com/devel/br/flutteraudioquery/loaders/tasks/AbstractLoadTask.java
+ boaventura.com.devel.br.flutteraudioquery.loaders.tasks.AbstractLoadTask
+boaventura/com/devel/br/flutteraudioquery/loaders/ImageLoader.java
+ boaventura.com.devel.br.flutteraudioquery.loaders.ImageLoader
+ boaventura.com.devel.br.flutteraudioquery.loaders.ImageLoader$ImageLoadTask
+boaventura/com/devel/br/flutteraudioquery/sortingtypes/GenreSortType.java
+ boaventura.com.devel.br.flutteraudioquery.sortingtypes.GenreSortType
+boaventura/com/devel/br/flutteraudioquery/loaders/AlbumLoader.java
+ boaventura.com.devel.br.flutteraudioquery.loaders.AlbumLoader
+ boaventura.com.devel.br.flutteraudioquery.loaders.AlbumLoader$1
+ boaventura.com.devel.br.flutteraudioquery.loaders.AlbumLoader$AlbumLoadTask
+boaventura/com/devel/br/flutteraudioquery/BuildConfig.java
+ boaventura.com.devel.br.flutteraudioquery.BuildConfig
+boaventura/com/devel/br/flutteraudioquery/sortingtypes/SongSortType.java
+ boaventura.com.devel.br.flutteraudioquery.sortingtypes.SongSortType
+boaventura/com/devel/br/flutteraudioquery/loaders/SongLoader.java
+ boaventura.com.devel.br.flutteraudioquery.loaders.SongLoader
+ boaventura.com.devel.br.flutteraudioquery.loaders.SongLoader$1
+ boaventura.com.devel.br.flutteraudioquery.loaders.SongLoader$SongTaskLoad

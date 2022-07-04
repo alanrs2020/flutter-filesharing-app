@@ -9,9 +9,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:open_file/open_file.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
+
 
 
 // A screen that allows users to take a picture using a given camera.
@@ -124,9 +126,18 @@ String printPath(String path){
   return path;
 }
 // A widget that displays the picture taken by the user.
-class DisplayPictureScreen extends StatelessWidget {
-  final String imagePath;
-  DisplayPictureScreen({Key key, this.imagePath}) : super(key: key);
+class DisplayPictureScreen extends StatefulWidget {
+
+  String imagePath;
+  DisplayPictureScreen({Key key,this.imagePath}) :super(key: key);
+
+  @override
+  DisplayPictureScreenState createState() => DisplayPictureScreenState();
+
+}
+class DisplayPictureScreenState extends State<DisplayPictureScreen>{
+
+
   bool isSaved = false;
   final pdf = pw.Document();
   String newPath;
@@ -135,27 +146,91 @@ class DisplayPictureScreen extends StatelessWidget {
 
 
   @override
+  void initState() {
+    super.initState();
+
+
+  }
+  @override
   Widget build(BuildContext context) {
+
+    if(widget.imagePath != null && !pages.contains(widget.imagePath)){
+      setState(() {
+        pages.add(widget.imagePath);
+      });
+    }
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
           title:
-                Text('Save as PDF',style: TextStyle(color: Colors.cyanAccent),),
+                Text('PDF Scanner',style: TextStyle(color: Colors.cyanAccent),),
         backgroundColor: Color.fromARGB(255, 51, 51, 51),
       ),
       // The image is stored as a file on the device. Use the `Image.file`
       // constructor with the given path to display the image.
       body: Container(
         child:
-            Stack(
-              children: [
-                Image.file(File(imagePath)),
-                Padding(
-                  child: Text("Page "+(pages.length+1).toString(),semanticsLabel: "Pages",style: TextStyle(color: Colors.cyanAccent),),
-                  padding: EdgeInsets.all(20),
-                )
-              ],
-            ),
+          Stack(
+             children: [
+              // Image.file(File(widget.imagePath)),
+               pages.length != null ?
+          ListView.builder(
+              itemCount: pages.length,
+              itemBuilder: (_,index){
+                return
+                  Stack(
+                      children: [
+                        Image.file(File(pages[index]))  ,
+
+                        Align(
+                            alignment: Alignment.topRight,
+
+                            child: Row(
+                              children: [
+                                Padding(
+                                  child: Text("Page "+(index+1).toString(),semanticsLabel: "Pages",style: TextStyle(color: Colors.cyanAccent),),
+                                  padding: EdgeInsets.all(20),
+                                ),
+                                IconButton(onPressed: ()async{
+                                  setState(() {
+                                    if(pages.length == 1){
+
+                                        Navigator.pop(context);
+                                        pages.clear();
+
+                                    }else{
+
+                                       pages.removeAt(index);
+
+                                    }
+                                  });
+                                },
+                                    icon: Icon(Icons.delete)
+                                ),
+                                IconButton(onPressed: ()async{
+
+                                    _cropImage(File(pages[index]));
+
+                                },
+                                    icon: Icon(Icons.crop_sharp)
+                                ),
+                              ],
+                            )
+                        )
+                      ]
+                  );
+
+              }
+
+          ):
+               Text("Empty"),
+
+               // Padding(
+               //   child: Text("Page "+(pages.length).toString(),semanticsLabel: "Pages",style: TextStyle(color: Colors.cyanAccent),),
+               //   padding: EdgeInsets.all(20),
+               // )
+             ],
+          ),
         alignment: Alignment.center,
       ),
       floatingActionButton: Row(
@@ -169,12 +244,10 @@ class DisplayPictureScreen extends StatelessWidget {
                      backgroundColor: Color.fromARGB(255, 51, 51, 51),
                      child: Text("Save",style: TextStyle(color: Colors.cyanAccent),),
                      onPressed: () async{
-                       await platform.invokeMethod("isFolderExits").then((value) async {
-                         if (value) {
+
                            try{
 
-                             pages.add(imagePath);
-
+                            // pages.add(widget.imagePath);
                              pdf.addPage(
                                pw.MultiPage(
                                  pageFormat: PdfPageFormat.a4,
@@ -187,8 +260,8 @@ class DisplayPictureScreen extends StatelessWidget {
                                    return  pw.Column(
                                        children: [
                                          pw.SizedBox(
-                                           width: 450,
-                                           height: 720,
+                                           width: image.width.floorToDouble() <= 480 ? image.width.floorToDouble() : 480,
+                                           height: image.height.floorToDouble() <= 720 ? image.height.floorToDouble(): 720,
                                            child: pw.Image(
                                              image,
                                              fit: pw.BoxFit.fill,
@@ -217,39 +290,16 @@ class DisplayPictureScreen extends StatelessWidget {
 
                            }catch(e){
                              print(e);
-                             Fluttertoast.showToast(msg: "Something went wrong."+e);
+                             Fluttertoast.showToast(msg: "Something went wrong."+e.toString());
                            }
-                         }else{
-                           showCupertinoDialog(context: context, builder: (_){
-                             return AlertDialog(
-                               title: Text("Create Folder"),
-                               content: Text("You need to create a new folder or select one."),
-                               actions: [
-                                 TextButton(onPressed: ()async{
-
-                                   await platform.invokeMethod("CreateFolder").then((value){
-                                     if(value){
-                                       Navigator.pop(context);
-                                     }else{
-                                       Fluttertoast.showToast(msg: "Please  create a folder");
-                                     }
-                                   });
-                                 }, child: Text("OK"))
-                               ],
-                             );
-                           });
                          }
-                       });
-
-
-                     }
                  ),
                  FloatingActionButton(
                    heroTag: "AddPage",
                      backgroundColor: Color.fromARGB(255, 51, 51, 51),
                      child: Icon(Icons.add_outlined,color: Colors.cyanAccent,),
                      onPressed: () async{
-                       pages.add(imagePath);
+                       //pages.add(widget.imagePath);
                        Navigator.pop(context);
                      }
 
@@ -267,6 +317,17 @@ class DisplayPictureScreen extends StatelessWidget {
                          Fluttertoast.showToast(msg: "Empty!!");
                        }
                        Navigator.pop(context);
+                     }
+
+                 ),
+                 FloatingActionButton(
+                     heroTag: "Crop",
+                     backgroundColor: Color.fromARGB(255, 51, 51, 51),
+                     child: Icon(Icons.crop,color: Colors.cyanAccent,),
+                     onPressed: () async{
+
+                       _cropImage(File(widget.imagePath));
+
                      }
 
                  ),
@@ -291,6 +352,53 @@ class DisplayPictureScreen extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
 
     );
+
+
+  }
+  Future<File> _cropImage(File imageFile) async {
+    File croppedFile = await ImageCropper().cropImage(
+        sourcePath: imageFile.path,
+        aspectRatioPresets: Platform.isAndroid
+        ? [
+        CropAspectRatioPreset.square,
+        CropAspectRatioPreset.ratio3x2,
+        CropAspectRatioPreset.original,
+        CropAspectRatioPreset.ratio4x3,
+        CropAspectRatioPreset.ratio16x9
+        ]
+        : [
+        CropAspectRatioPreset.original,
+        CropAspectRatioPreset.square,
+        CropAspectRatioPreset.ratio3x2,
+        CropAspectRatioPreset.ratio4x3,
+        CropAspectRatioPreset.ratio5x3,
+        CropAspectRatioPreset.ratio5x4,
+        CropAspectRatioPreset.ratio7x5,
+        CropAspectRatioPreset.ratio16x9
+        ],
+        androidUiSettings: AndroidUiSettings(
+            toolbarTitle: 'Crop ',
+            toolbarColor: Color.fromARGB(255, 51, 51, 51),
+            toolbarWidgetColor: Colors.white,
+            initAspectRatio: CropAspectRatioPreset.original,
+            lockAspectRatio: false),
+        iosUiSettings: IOSUiSettings(
+          title: 'Crop',
+        ));
+    if (croppedFile != null) {
+
+      setState ( () {
+       // pages.insert(pages.indexOf(widget.imagePath), croppedFile.path);
+       try {
+         pages.removeWhere((element) => element == widget.imagePath);
+         widget.imagePath = croppedFile.path;
+       }catch (e){
+         Fluttertoast.showToast(msg: "Crop failed");
+       }
+      });
+      Fluttertoast.showToast(msg: "Cropped");
+
+    }
   }
 }
 Future<String> get _localFile async {

@@ -1,0 +1,21 @@
+com/pkmnapps/nearby_connections/NearbyConnectionsPlugin.java
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$1
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$10
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$11
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$12
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$13
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$14
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$2
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$3
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$4
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$5
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$6
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$7
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$8
+ com.pkmnapps.nearby_connections.NearbyConnectionsPlugin$9
+com/pkmnapps/nearby_connections/LocationHelper.java
+ com.pkmnapps.nearby_connections.LocationHelper
+ com.pkmnapps.nearby_connections.LocationHelper$1
+com/pkmnapps/nearby_connections/BuildConfig.java
+ com.pkmnapps.nearby_connections.BuildConfig

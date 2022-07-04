@@ -1,0 +1,70 @@
+io/flutter/plugins/googlemobileads/FlutterServerSideVerificationOptions.java
+ io.flutter.plugins.googlemobileads.FlutterServerSideVerificationOptions
+io/flutter/plugins/googlemobileads/AdMessageCodec.java
+ io.flutter.plugins.googlemobileads.AdMessageCodec
+ io.flutter.plugins.googlemobileads.AdMessageCodec$1
+io/flutter/plugins/googlemobileads/FlutterAdListener.java
+ io.flutter.plugins.googlemobileads.FlutterAdListener
+io/flutter/plugins/googlemobileads/AdInstanceManager.java
+ io.flutter.plugins.googlemobileads.AdInstanceManager
+io/flutter/plugins/googlemobileads/FlutterAdSize.java
+ io.flutter.plugins.googlemobileads.FlutterAdSize
+ io.flutter.plugins.googlemobileads.FlutterAdSize$AdSizeFactory
+ io.flutter.plugins.googlemobileads.FlutterAdSize$AnchoredAdaptiveBannerAdSize
+ io.flutter.plugins.googlemobileads.FlutterAdSize$SmartBannerAdSize
+io/flutter/plugins/googlemobileads/FlutterDestroyableAd.java
+ io.flutter.plugins.googlemobileads.FlutterDestroyableAd
+io/flutter/plugins/googlemobileads/FlutterBannerAd.java
+ io.flutter.plugins.googlemobileads.FlutterBannerAd
+ io.flutter.plugins.googlemobileads.FlutterBannerAd$1
+ io.flutter.plugins.googlemobileads.FlutterBannerAd$Builder
+io/flutter/plugins/googlemobileads/BuildConfig.java
+ io.flutter.plugins.googlemobileads.BuildConfig
+io/flutter/plugins/googlemobileads/GoogleMobileAdsPlugin.java
+ io.flutter.plugins.googlemobileads.GoogleMobileAdsPlugin
+ io.flutter.plugins.googlemobileads.GoogleMobileAdsPlugin$1
+ io.flutter.plugins.googlemobileads.GoogleMobileAdsPlugin$NativeAdFactory
+io/flutter/plugins/googlemobileads/FlutterPublisherInterstitialAd.java
+ io.flutter.plugins.googlemobileads.FlutterPublisherInterstitialAd
+io/flutter/plugins/googlemobileads/FlutterRewardedAd.java
+ io.flutter.plugins.googlemobileads.FlutterRewardedAd
+ io.flutter.plugins.googlemobileads.FlutterRewardedAd$1
+ io.flutter.plugins.googlemobileads.FlutterRewardedAd$2
+ io.flutter.plugins.googlemobileads.FlutterRewardedAd$FlutterRewardItem
+io/flutter/plugins/googlemobileads/FlutterAd.java
+ io.flutter.plugins.googlemobileads.FlutterAd
+ io.flutter.plugins.googlemobileads.FlutterAd$FlutterLoadAdError
+ io.flutter.plugins.googlemobileads.FlutterAd$FlutterOverlayAd
+io/flutter/plugins/googlemobileads/Constants.java
+ io.flutter.plugins.googlemobileads.Constants
+io/flutter/plugins/googlemobileads/FlutterNativeAd.java
+ io.flutter.plugins.googlemobileads.FlutterNativeAd
+ io.flutter.plugins.googlemobileads.FlutterNativeAd$1
+ io.flutter.plugins.googlemobileads.FlutterNativeAd$2
+ io.flutter.plugins.googlemobileads.FlutterNativeAd$Builder
+io/flutter/plugins/googlemobileads/FlutterInterstitialAd.java
+ io.flutter.plugins.googlemobileads.FlutterInterstitialAd
+ io.flutter.plugins.googlemobileads.FlutterInterstitialAd$1
+ io.flutter.plugins.googlemobileads.FlutterInterstitialAd$Builder
+io/flutter/plugins/googlemobileads/FlutterInitializationStatus.java
+ io.flutter.plugins.googlemobileads.FlutterInitializationStatus
+io/flutter/plugins/googlemobileads/FlutterPublisherBannerAd.java
+ io.flutter.plugins.googlemobileads.FlutterPublisherBannerAd
+ io.flutter.plugins.googlemobileads.FlutterPublisherBannerAd$1
+ io.flutter.plugins.googlemobileads.FlutterPublisherBannerAd$Builder
+io/flutter/plugins/googlemobileads/GoogleMobileAdsViewFactory.java
+ io.flutter.plugins.googlemobileads.GoogleMobileAdsViewFactory
+ io.flutter.plugins.googlemobileads.GoogleMobileAdsViewFactory$1
+ io.flutter.plugins.googlemobileads.GoogleMobileAdsViewFactory$ErrorTextView
+io/flutter/plugins/googlemobileads/FlutterPublisherAdRequest.java
+ io.flutter.plugins.googlemobileads.FlutterPublisherAdRequest
+ io.flutter.plugins.googlemobileads.FlutterPublisherAdRequest$1
+ io.flutter.plugins.googlemobileads.FlutterPublisherAdRequest$Builder
+io/flutter/plugins/googlemobileads/FlutterAdRequest.java
+ io.flutter.plugins.googlemobileads.FlutterAdRequest
+ io.flutter.plugins.googlemobileads.FlutterAdRequest$1
+ io.flutter.plugins.googlemobileads.FlutterAdRequest$Builder
+io/flutter/plugins/googlemobileads/FlutterAdapterStatus.java
+ io.flutter.plugins.googlemobileads.FlutterAdapterStatus
+ io.flutter.plugins.googlemobileads.FlutterAdapterStatus$1
+ io.flutter.plugins.googlemobileads.FlutterAdapterStatus$AdapterInitializationState

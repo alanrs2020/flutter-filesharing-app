@@ -28,7 +28,7 @@ void initState(){
     adUnitId: "ca-app-pub-8379180632315258/1266776565",
     factoryId: 'listTile',
     request: AdRequest(),
-    listener: AdListener(
+    listener:NativeAdListener(
       onAdLoaded: (_) {
         setState(() {
           _isAdLoaded = true;

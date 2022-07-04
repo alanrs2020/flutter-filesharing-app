@@ -74,7 +74,7 @@ class _WifiDirectState extends State<WifiDirect> {
   final Strategy strategy = Strategy.P2P_POINT_TO_POINT;
   final String ServiceId = "com.devalanrs.bytes";
   String cId = "0"; //currently connected device ID
-  static File tempFile; //reference to the file currently being transferred
+  static String tempFile; //reference to the file currently being transferred
   static Map<int, String> map = new Map(); //store filename mapped to corresponding payloadId
   static dynamic items;
   static dynamic ditems;
@@ -90,12 +90,12 @@ class _WifiDirectState extends State<WifiDirect> {
   AdWidget adWidget ,adWidget2,adWidget3;
   static const platform = const MethodChannel('storage_access');
   static final _kAdIndex = 1;
-  AdListener listener;
+  BannerAdListener listener;
   bool _isAdLoaded = false;
   @override
   void initState() {
     super.initState();
-    listener = AdListener(
+    listener = BannerAdListener(
       // Called when an ad is successfully received.
       onAdLoaded: (Ad ad) {
         setState(() {
@@ -113,7 +113,8 @@ class _WifiDirectState extends State<WifiDirect> {
       // Called when an ad removes an overlay that covers the screen.
       onAdClosed: (Ad ad) => print('Ad closed.'),
       // Called when an ad is in the process of leaving the application.
-      onApplicationExit: (Ad ad) => print('Left application.'),
+
+      onAdWillDismissScreen: (Ad ad) => print('Left application.'),
     );
 
     myBanner.load();
@@ -125,19 +126,19 @@ class _WifiDirectState extends State<WifiDirect> {
     adUnitId: 'ca-app-pub-8379180632315258/8610079961',
     size: AdSize.mediumRectangle,
     request: AdRequest(),
-    listener: AdListener(),
+    listener: BannerAdListener(),
   );
   final BannerAd myBanner2 = BannerAd(
     adUnitId: 'ca-app-pub-8379180632315258/5374446497',
     size: AdSize.mediumRectangle,
     request: AdRequest(),
-    listener: AdListener(),
+    listener: BannerAdListener(),
   );
   final BannerAd myBanner3 = BannerAd(
     adUnitId: 'ca-app-pub-8379180632315258/7617466459',
     size: AdSize.mediumRectangle,
     request: AdRequest(),
-    listener: AdListener(),
+    listener: BannerAdListener(),
   );
   @override
   Widget build(BuildContext context) {
@@ -711,12 +712,9 @@ getProgress(double v){
 
 
                             if (map.containsKey(payloadId)) {
-                              if (await tempFile.exists()) {
+                              if (tempFile != null) {
                                 try {
-                                  await platform.invokeMethod("SaveFile",<String,dynamic>{
-                                    'file':tempFile.readAsBytesSync(),
-                                    'name':fileName
-                                  });
+                                  moveFile(tempFile, fileName);
                                 }
                                 catch(e){
                                   Fluttertoast.showToast(msg: "Error file 89");
@@ -731,8 +729,7 @@ getProgress(double v){
                             }
                           }
                         } else if (payload.type == PayloadType.FILE) {
-                          tempFile = File(payload.uri);
-
+                          tempFile = payload.uri;
                           Fluttertoast.showToast(
                               msg: "File transfer Started :)",
                               toastLength: Toast.LENGTH_SHORT,
@@ -799,7 +796,7 @@ getProgress(double v){
                           }
                           else {
                             try {
-                              if (await tempFile.exists() &&
+                              if (tempFile != null &&
                                   map.containsKey(payloadTransferUpdate.id)) {
                                 String dname = globals.map[payloadTransferUpdate
                                     .id];
@@ -853,10 +850,7 @@ getProgress(double v){
                             try {
                               //final path = await _localPath;
                               String name = map[payloadTransferUpdate.id];
-                              await platform.invokeMethod("SaveFile",<String,dynamic>{
-                                'file':tempFile.readAsBytesSync(),
-                                'name':name
-                              });
+                              //moveFile(tempFile, name);
                               
                             }catch (e){
                              print("Rename error $e");
@@ -888,7 +882,17 @@ getProgress(double v){
       },
     );
   }
+  Future<bool> moveFile(String uri, String fileName) async {
+    try {
+      await platform.invokeMethod("Save",<String,String>{
+        'name':fileName,
+        'uri':uri
+      });
 
+    }catch (e){
+      print("Rename error $e");
+    }
+  }
   getsBytes(int sizeInBytes){
     double size = sizeInBytes / (1000*1000);
     String megaBytes = size.toString().split(".").first;

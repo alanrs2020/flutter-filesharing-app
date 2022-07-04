@@ -1,0 +1,12 @@
+top/kikt/imagescanner/permission/PermissionsUtils.java
+ top.kikt.imagescanner.permission.PermissionsUtils
+ top.kikt.imagescanner.permission.PermissionsUtils$1
+ top.kikt.imagescanner.permission.PermissionsUtils$2
+top/kikt/imagescanner/permission/PermissionsListener.java
+ top.kikt.imagescanner.permission.PermissionsListener
+top/kikt/imagescanner/util/LogUtils.java
+ top.kikt.imagescanner.util.LogUtils
+top/kikt/imagescanner/thumb/CustomTarget.java
+ top.kikt.imagescanner.thumb.CustomTarget
+top/kikt/imagescanner/BuildConfig.java
+ top.kikt.imagescanner.BuildConfig

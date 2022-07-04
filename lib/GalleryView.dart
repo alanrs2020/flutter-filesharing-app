@@ -31,8 +31,8 @@ class GalleryViewState extends State<GalleryView>{
   static const platform = const MethodChannel('storage_access');
  List<AssetEntity> videoList = [];
   Future<void> getFiles() async { //asyn function to get list of files
-    var result = await PhotoManager.requestPermission();
-    if (result) {
+    var result = await PhotoManager.requestPermissionExtend();
+    if (result != null) {
       // success
       List<AssetPathEntity> list = await PhotoManager.getAssetPathList(hasAll: true);
 
@@ -42,36 +42,6 @@ class GalleryViewState extends State<GalleryView>{
           videoList = assetList;
 
         });
-       if(mounted){
-         await platform.invokeMethod("isFolderExits").then((value) {
-           if (value) {
-             print(value);
-           }else{
-             showCupertinoDialog(
-                 barrierDismissible: false,
-                 context: context, builder: (_){
-               return WillPopScope(child: AlertDialog(
-                 title: Text("Create Folder"),
-                 content: Text("You need to create a new folder or select one."),
-                 actions: [
-                   TextButton(onPressed: ()async{
-
-                     await platform.invokeMethod("CreateFolder").then((value){
-                       if(value){
-                         Navigator.pop(context);
-                       }else{
-                         Fluttertoast.showToast(msg: "Please  create a folder");
-                       }
-                     });
-                   }, child: Text("OK"))
-                 ],
-               ),
-                 onWillPop: () async => false,
-               );
-             });
-           }
-         });
-       }
       }catch(e){
         print(e);
       }
@@ -91,28 +61,6 @@ class GalleryViewState extends State<GalleryView>{
   void initState() {
     super.initState();
     getFiles();
-
-  }
-
-  void getFolder() {
-    showDialog(context: context,barrierDismissible: false, builder: (_){
-      return AlertDialog(
-        title: Text("Create Folder"),
-        content: Text("You need to create a folder or select one"),
-        actions: [
-          TextButton(onPressed: () async{
-            try {
-              Navigator.pop(context);
-              await platform.invokeMethod('SaveFile');
-            } on PlatformException catch (e) {
-              print("Failed to get battery level: '${e.message}'.");
-            }
-          },
-            child: Text("Create"),
-          )
-        ],
-      );
-    });
 
   }
   @override
@@ -152,7 +100,7 @@ class GalleryViewState extends State<GalleryView>{
                   AssetEntity asset = videoList[index];
 
                   return  FutureBuilder(
-                      future: asset.thumbData,
+                      future: asset.thumbnailData,
                       builder: (BuildContext context,AsyncSnapshot snapshot) {
                         var bytes = snapshot.data;
                         if (bytes == null )
