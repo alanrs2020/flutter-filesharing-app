@@ -3,6 +3,7 @@
 # Play Store
 
 https://play.google.com/store/apps/details?id=com.devalanrs.bytes
+# Buy me a coffee
 https://www.buymeacoffee.com/devalanrs
 
 Bytes is a multifunctional tool app. By using bytes you can share files offline.
