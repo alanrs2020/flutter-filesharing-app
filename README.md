@@ -2,7 +2,11 @@
 
 # Play Store
 
-https://play.google.com/store/apps/details?id=com.devalanrs.bytes
+<a href="https://play.google.com/store/apps/details?id=com.devalanrs.bytes">
+<img src="https://img.shields.io/badge/GooglePay-%233780F1.svg?style=for-the-badge&logo=Google-Pay&logoColor=white" width="350"/>
+</a>
+
+
 # Buy me a coffee
 https://www.buymeacoffee.com/devalanrs
 
