@@ -3,7 +3,7 @@
 # Play Store
 
 <a href="https://play.google.com/store/apps/details?id=com.devalanrs.bytes">
-<img src="https://en.m.wikipedia.org/wiki/File:Google_Play_Store_badge_EN.svg" width="350"/>
+<img src="https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white" width="350"/>
 </a>
 
 <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" width="350" />
