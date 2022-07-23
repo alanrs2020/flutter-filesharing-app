@@ -11,7 +11,11 @@
 
 
 # Buy me a coffee
-https://www.buymeacoffee.com/devalanrs
+<a href="https://www.buymeacoffee.com/devalanrs">
+<img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"/>
+</a>
+
+
 
 Bytes is a multifunctional tool app. By using bytes you can share files offline.
 Bytes - share anything with anyone.
