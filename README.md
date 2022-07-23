@@ -2,12 +2,12 @@
 
 # Play Store
 
-<a href="https://play.google.com/store/apps/details?id=com.devalanrs.bytes">
+<a align="center" href="https://play.google.com/store/apps/details?id=com.devalanrs.bytes">
 <img src="https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white" width="350"/>
 </a>
-
+<a align="center">
 <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" width="350" />
-
+</a>
 
 
 # Buy me a coffee
