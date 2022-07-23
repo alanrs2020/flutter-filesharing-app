@@ -3,8 +3,11 @@
 # Play Store
 
 <a href="https://play.google.com/store/apps/details?id=com.devalanrs.bytes">
-<img src="https://img.shields.io/badge/GooglePay-%233780F1.svg?style=for-the-badge&logo=Google-Pay&logoColor=white" width="350"/>
+<img src="https://brandlogos.net/get-it-on-google-play-badge-91501.html" width="350"/>
 </a>
+
+<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" width="350" />
+
 
 
 # Buy me a coffee
