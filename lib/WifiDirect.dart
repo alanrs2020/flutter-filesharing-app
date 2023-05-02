@@ -519,11 +519,11 @@ getProgress(double v){
         //Scaffold.of(context).showSnackBar(SnackBar(content: Text("Location Service Enabled :)")));
       } else {
         if (await Nearby().checkLocationEnabled()) {
-          Scaffold.of(context).showSnackBar(
+          ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text("Location is ON :)")));
         } else {
           if (await Nearby().checkLocationPermission()) {
-            Scaffold.of(context).showSnackBar(SnackBar(
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("Location permissions granted :)")));
           } else {
             Fluttertoast.showToast(
